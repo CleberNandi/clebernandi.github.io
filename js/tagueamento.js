@@ -6,11 +6,21 @@
 // Caso tenha alguma dúvida sobre o case, não hesite em entrar em contato.
 
 var captureContact = function click_contact() {
-    console.log("Clieuqi aqui")
+    console.log("Cliquei em 'Entre em Contato")
     ga('send', {
         hitType: 'event',
         eventCategory: 'menu',
         eventAction: 'entre_em_contato',
         eventLabel: 'link_externo'
+    });
+}
+
+var captureDownloads = function click_downloads() {
+    console.log("Cliquei em 'Download PDF")
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'menu',
+        eventAction: 'download_pdf',
+        eventLabel: 'download_pdf'
     });
 }
