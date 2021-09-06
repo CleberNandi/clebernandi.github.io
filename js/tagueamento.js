@@ -24,3 +24,13 @@ var captureDownloads = function click_downloads() {
         eventLabel: 'download_pdf'
     });
 }
+
+var capturAnalyze = function click_analize(text) {
+    console.log(`Cliquei em ${text}`)
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'analise',
+        eventAction: 'ver_mais',
+        eventLabel: text
+    });
+}
