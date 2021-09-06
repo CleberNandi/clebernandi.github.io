@@ -14,8 +14,8 @@
         m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
+    ga('create', 'UA-12345-6', 'auto');
     ga('create', 'UA-206684270-1', 'auto');
-    // ga('create', 'UA-12345-6', 'auto');
     ga('send', 'pageview');
   </script>
   <link rel="stylesheet" href="css/normalize.css">
@@ -97,12 +97,16 @@
       <h3 id="contato" class="secao-subtitulo">Contato</h3>
       <form class="contato">
         <ul>
-          <li> <label for="nome">Nome</label> <input type="text" id="nome" placeholder="Nome Teste"> </li>
-          <li> <label for="email">E-Mail</label> <input type="email" id="email" placeholder="email@dominio.com"> </li>
-          <li> <label for="telefone">Telefone</label> <input type="tel" id="telefone" placeholder="(11) 4455-4455">
+          <li> <label for="nome">Nome</label> <input type="text" id="nome" placeholder="Nome Teste"
+              onchange=captureIdField('nome')> </li>
+          <li> <label for="email">E-Mail</label> <input type="email" id="email" placeholder="email@dominio.com"
+              onchange=captureIdField('email')> </li>
+          <li> <label for="telefone">Telefone</label> <input type="tel" id="telefone" placeholder="(11) 4455-4455"
+              onchange=captureIdField('telefone')>
           </li>
-          <li> <label for="aceito">Aceito que entrem em contato</label> <input type="checkbox" id="aceito"> </li>
-          <li> <button type="submit">Enviar</button> </li>
+          <li> <label for="aceito">Aceito que entrem em contato</label> <input type="checkbox" id="aceito"
+              onchange=captureIdField('aceito')> </li>
+          <li> <button type="submit" onclick=captureSendContact()>Enviar</button> </li>
         </ul>
       </form><br><br>
       <h3 id="historia" class="secao-subtitulo">História</h3>

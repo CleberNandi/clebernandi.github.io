@@ -5,8 +5,7 @@
 // para fazer a sua coleta.
 // Caso tenha alguma dúvida sobre o case, não hesite em entrar em contato.
 
-var captureContact = function click_contact() {
-    console.log("Cliquei em 'Entre em Contato")
+var captureContact = function clickContact() {
     ga('send', {
         hitType: 'event',
         eventCategory: 'menu',
@@ -15,8 +14,7 @@ var captureContact = function click_contact() {
     });
 }
 
-var captureDownloads = function click_downloads() {
-    console.log("Cliquei em 'Download PDF")
+var captureDownloads = function clickDownloads() {
     ga('send', {
         hitType: 'event',
         eventCategory: 'menu',
@@ -25,12 +23,29 @@ var captureDownloads = function click_downloads() {
     });
 }
 
-var capturAnalyze = function click_analize(text) {
-    console.log(`Cliquei em ${text}`)
+var captureAnalyze = function clickAnalize(text) {
     ga('send', {
         hitType: 'event',
         eventCategory: 'analise',
         eventAction: 'ver_mais',
         eventLabel: text
+    });
+}
+
+var captureIdField = function captureIdField(idField) {
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'contato',
+        eventAction: idField,
+        eventLabel: 'preencheu'
+    });
+}
+
+var captureSendContact = function captureSendContact() {
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'contato',
+        eventAction: 'enviado',
+        eventLabel: 'enviado'
     });
 }
